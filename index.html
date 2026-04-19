@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企业官方网站</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Microsoft Yahei", Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f5f7fa;
+        }
+        a {
+            text-decoration: none;
+            color: #2c3e50;
+        }
+        ul {
+            list-style: none;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 顶部导航栏 */
+        header {
+            background-color: #2c3e50;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        .logo {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+        .nav-menu a {
+            color: #fff;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover {
+            color: #3498db;
+        }
+
+        /* 首页轮播图 */
+        .carousel {
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel-item {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            display: none;
+        }
+        .carousel-item.active {
+            display: block;
+        }
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.3);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .prev {left: 20px;}
+        .next {right: 20px;}
+
+        /* 通用板块标题 */
+        .section {
+            padding: 6rem 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        /* 新闻中心板块 */
+        .news-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .news-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .news-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .news-content {
+            padding: 1.5rem;
+        }
+
+        /* 产品图片画廊 */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        /* 联系我们板块 */
+        .contact-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            font-size: 1.1rem;
+        }
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .form-item {
+            margin-bottom: 1.5rem;
+        }
+        .form-item input, .form-item textarea {
+            width: 100%;
+            padding: 0.9rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .submit-btn {
+            padding: 0.9rem 2rem;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* 返回顶部按钮 */
+        .back-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 45px;
+            height: 45px;
+            background: #2c3e50;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container nav">
+            <a href="#" class="logo">企业官网</a>
+            <ul class="nav-menu">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#news">新闻中心</a></li>
+                <li><a href="#gallery">产品展示</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 首页轮播大图 -->
+    <section id="home" class="carousel">
+        <div class="carousel-item active" style="background-image: url('https://picsum.photos/1920/500?random=1');"></div>
+        <div class="carousel-item" style="background-image: url('https://picsum.photos/1920/500?random=2');"></div>
+        <div class="carousel-item" style="background-image: url('https://picsum.photos/1920/500?random=3');"></div>
+        <button class="carousel-btn prev">❮</button>
+        <button class="carousel-btn next">❯</button>
+    </section>
+
+    <!-- 新闻中心 -->
+    <section id="news" class="section">
+        <div class="container">
+            <h2 class="section-title">新闻中心 News</h2>
+            <div class="news-box">
+                <div class="news-card">
+                    <img src="https://picsum.photos/600/400?random=10" class="news-img">
+                    <div class="news-content">
+                        <h3>企业发展最新动态</h3>
+                        <p>发布企业最新行业资讯、公司动态、重大事件公告</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="https://picsum.photos/600/400?random=11" class="news-img">
+                    <div class="news-content">
+                        <h3>行业前沿资讯</h3>
+                        <p>分享行业技术趋势、市场分析、专业领域知识科普</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品图片展示画廊 -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2 class="section-title">产品展示</h2>
+            <div class="gallery">
+                <img src="https://picsum.photos/500/400?random=20">
+                <img src="https://picsum.photos/500/400?random=21">
+                <img src="https://picsum.photos/500/400?random=22">
+                <img src="https://picsum.photos/500/400?random=23">
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们板块 -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">联系我们 Contact</h2>
+            <div class="contact-wrap">
+                <div class="contact-info">
+                    <div>
+                        <h4>联系电话</h4>
+                        <p>400-123-4567</p>
+                    </div>
+                    <div>
+                        <h4>官方邮箱</h4>
+                        <p>service@company.com</p>
+                    </div>
+                    <div>
+                        <h4>公司地址</h4>
+                        <p>中国商务产业园</p>
+                    </div>
+                    <div>
+                        <h4>工作时间</h4>
+                        <p>周一至周五 9:00 - 18:00</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-item">
+                            <label>您的姓名</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-item">
+                            <label>联系邮箱</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="form-item">
+                            <label>留言内容</label>
+                            <textarea required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">提交留言</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 返回顶部按钮 -->
+    <div class="back-top">↑</div>
+
+    <script>
+        // 轮播图自动切换功能
+        const items = document.querySelectorAll('.carousel-item');
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+        let index = 0;
+        function showImg() {
+            items.forEach(item => item.classList.remove('active'));
+            items[index].classList.add('active');
+        }
+        next.onclick = () => {index++; if(index>=items.length) index=0; showImg();}
+        prev.onclick = () => {index--; if(index<0) index=items.length-1; showImg();}
+        setInterval(() => {index++; if(index>=items.length) index=0; showImg();}, 4000);
+
+        // 返回顶部平滑滚动
+        const backTop = document.querySelector('.back-top');
+        window.onscroll = () => {
+            if(window.scrollY > 300) backTop.style.opacity=1;
+            else backTop.style.opacity=0;
+        }
+        backTop.onclick = () => window.scrollTo({top:0, behavior:'smooth'});
+    </script>
+</body>
+</html>
