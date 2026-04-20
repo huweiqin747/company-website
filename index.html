@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>高端科技企业官网</title>
+    <title>江西警察学院 - 警校简介官网</title>
     <style>
         * {
             margin: 0;
@@ -15,11 +15,10 @@
             font-family: "Microsoft Yahei", system-ui, sans-serif;
             color: #e6f7ff;
             line-height: 1.7;
-            background-color: #000209;
+            background-color: #000107;
             overflow-x: hidden;
         }
 
-        /* 全局动态科技网格背景（最炫酷核心） */
         body::before {
             content: '';
             position: fixed;
@@ -28,15 +27,15 @@
             width: 100%;
             height: 100%;
             background-image: 
-                linear-gradient(rgba(0, 180, 255, 0.12) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 180, 255, 0.12) 1px, transparent 1px);
-            background-size: 40px 40px;
+                linear-gradient(rgba(0, 162, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 162, 255, 0.1) 1px, transparent 1px);
+            background-size: 45px 45px;
             z-index: -1;
-            animation: bgMove 20s linear infinite;
+            animation: bgMove 25s linear infinite;
         }
         @keyframes bgMove {
             0% { background-position: 0 0; }
-            100% { background-position: 80px 80px; }
+            100% { background-position: 90px 90px; }
         }
 
         a {
@@ -51,15 +50,14 @@
             margin: 0 auto;
         }
 
-        /* ========== 顶部全息科技导航栏 ========== */
         header {
             position: sticky;
             top: 0;
             z-index: 999;
-            background: rgba(0, 5, 20, 0.65);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0, 200, 255, 0.25);
-            box-shadow: 0 8px 32px rgba(0, 120, 255, 0.1);
+            background: rgba(0, 4, 18, 0.75);
+            backdrop-filter: blur(22px);
+            border-bottom: 1px solid rgba(0, 180, 255, 0.25);
+            box-shadow: 0 8px 32px rgba(0, 90, 255, 0.12);
         }
         .nav {
             display: flex;
@@ -70,12 +68,12 @@
         .logo {
             font-size: 1.7rem;
             font-weight: 700;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             color: #ffffff;
             text-shadow: 
-                0 0 8px #00ccff,
-                0 0 25px #0099ff,
-                0 0 45px #0077ff;
+                0 0 8px #0099ff,
+                0 0 25px #0077ff,
+                0 0 45px #0055ff;
         }
         .nav-menu {
             display: flex;
@@ -105,9 +103,8 @@
             text-shadow: 0 0 12px #00eeff;
         }
 
-        /* ========== 首页炫酷全屏轮播 ========== */
         .carousel {
-            height: 620px;
+            height: 650px;
             position: relative;
             overflow: hidden;
         }
@@ -124,12 +121,11 @@
             display: block;
             opacity: 1;
         }
-        /* 暗调科技遮罩 */
         .carousel-item::after {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(to bottom, rgba(0,2,9,0.2), rgba(0,2,9,0.95));
+            background: linear-gradient(to bottom, rgba(0,1,7,0.15), rgba(0,1,7,0.92));
         }
         .carousel-btn {
             position: absolute;
@@ -139,7 +135,7 @@
             height: 55px;
             border-radius: 50%;
             border: 2px solid rgba(0, 255, 255, 0.4);
-            background: rgba(0, 30, 60, 0.4);
+            background: rgba(0, 20, 45, 0.4);
             backdrop-filter: blur(10px);
             color: #00eeff;
             font-size: 1.4rem;
@@ -155,7 +151,6 @@
         .prev { left: 40px; }
         .next { right: 40px; }
 
-        /* ========== 板块通用标题（科技激光线条） ========== */
         .section {
             padding: 8rem 0;
         }
@@ -180,9 +175,8 @@
         .section-title::before { left: calc(50% - 140px); }
         .section-title::after { right: calc(50% - 140px); background: linear-gradient(270deg,transparent,#00eeff); }
 
-        /* ========== 企业简介 全息玻璃科技模块 ========== */
         .about-box {
-            background: rgba(0, 20, 45, 0.4);
+            background: rgba(0, 12, 35, 0.45);
             backdrop-filter: blur(15px);
             border: 1px solid rgba(0, 238, 255, 0.25);
             border-radius: 20px;
@@ -195,7 +189,6 @@
             box-shadow: 0 0 40px rgba(0, 130, 255, 0.25);
             border-color: rgba(0, 238, 255, 0.5);
         }
-        /* 边框流光特效 */
         .about-box::before {
             content: '';
             position: absolute;
@@ -217,164 +210,77 @@
         .about-text {
             font-size: 1.15rem;
             color: #b8e1ff;
-            text-align: center;
             line-height: 2;
         }
 
-        /* ========== 新闻中心 炫酷悬浮科技卡片 ========== */
-        .news-grid {
+        .campus-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
             gap: 2.5rem;
         }
-        .news-card {
-            background: rgba(0, 18, 40, 0.45);
+        .campus-card {
+            background: rgba(0, 10, 30, 0.45);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(0, 238, 255, 0.2);
             border-radius: 16px;
             overflow: hidden;
             transition: all 0.5s cubic-bezier(0.2,1,0.3,1);
         }
-        .news-card:hover {
+        .campus-card:hover {
             transform: translateY(-12px) scale(1.02);
             box-shadow: 0 15px 50px rgba(0, 110, 255, 0.25);
             border-color: #00eeff;
         }
-        .news-img {
+        .campus-img {
             width: 100%;
             height: 200px;
             object-fit: cover;
             filter: brightness(0.85);
             transition: 0.5s;
         }
-        .news-card:hover .news-img {
+        .campus-card:hover .campus-img {
             filter: brightness(1.1);
         }
-        .news-content {
+        .campus-content {
             padding: 2rem;
         }
-        .news-content h3 {
+        .campus-content h3 {
             font-size: 1.3rem;
             color: #ffffff;
             margin-bottom: 1rem;
             text-shadow: 0 0 6px #00aaff;
         }
-        .news-content p {
+        .campus-content p {
             color: #99d8ff;
         }
 
-        /* ========== 产品展示 科技悬浮画廊 ========== */
-        .product-grid {
+        .major-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
             gap: 2rem;
         }
-        .product-item {
-            border-radius: 12px;
-            overflow: hidden;
+        .major-item {
+            background: rgba(0, 10, 30, 0.45);
+            backdrop-filter: blur(12px);
             border: 1px solid rgba(0, 238, 255, 0.2);
-            transition: 0.5s;
-            position: relative;
-        }
-        .product-item img {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-            display: block;
+            border-radius: 12px;
+            padding: 2rem;
             transition: 0.5s;
         }
-        .product-item:hover {
-            transform: scale(1.05);
+        .major-item:hover {
+            transform: scale(1.04);
             box-shadow: 0 0 35px rgba(0, 160, 255, 0.3);
             border-color: #00eeff;
         }
-        .product-item:hover img {
-            filter: brightness(1.15);
-        }
-
-        /* ========== 联系我们 科技表单模块 ========== */
-        .contact-wrap {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-        .contact-cell {
-            background: rgba(0, 18, 40, 0.45);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(0, 238, 255, 0.2);
-            border-radius: 14px;
-            padding: 2rem;
-            transition: 0.4s;
-        }
-        .contact-cell:hover {
-            border-color: #00eeff;
-            box-shadow: 0 0 25px rgba(0, 120, 255, 0.2);
-        }
-        .contact-cell h4 {
+        .major-item h3 {
             color: #00eeff;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
         }
-        .contact-cell p {
+        .major-item p {
             color: #b8e1ff;
         }
 
-        .contact-form {
-            background: rgba(0, 18, 40, 0.45);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(0, 238, 255, 0.2);
-            border-radius: 16px;
-            padding: 2.5rem;
-        }
-        .form-item {
-            margin-bottom: 2rem;
-        }
-        .form-item label {
-            display: block;
-            margin-bottom: 0.8rem;
-            color: #99d8ff;
-        }
-        .form-item input,.form-item textarea {
-            width: 100%;
-            padding: 1.1rem;
-            background: rgba(0, 5, 22, 0.7);
-            border: 1px solid rgba(0, 238, 255, 0.25);
-            border-radius: 8px;
-            color: #e6f7ff;
-            outline: none;
-            transition: 0.4s;
-        }
-        .form-item input:focus,.form-item textarea:focus {
-            border-color: #00eeff;
-            box-shadow: 0 0 15px rgba(0, 238, 255, 0.25);
-        }
-        .form-item textarea {
-            height: 140px;
-            resize: none;
-        }
-        .submit-btn {
-            width: 100%;
-            padding: 1.1rem;
-            background: linear-gradient(90deg,#0055ff,#00aaff,#00eeff);
-            border: none;
-            border-radius: 8px;
-            color: #fff;
-            font-size: 1.05rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.4s;
-        }
-        .submit-btn:hover {
-            box-shadow: 0 0 30px rgba(0, 130, 255, 0.45);
-            transform: translateY(-3px);
-        }
-
-        /* ========== 炫酷返回顶部 ========== */
         .back-top {
             position: fixed;
             bottom: 40px;
@@ -382,7 +288,7 @@
             width: 58px;
             height: 58px;
             border-radius: 50%;
-            background: rgba(0, 20, 45, 0.6);
+            background: rgba(0, 12, 35, 0.6);
             backdrop-filter: blur(12px);
             border: 2px solid rgba(0, 238, 255, 0.4);
             color: #00eeff;
@@ -403,152 +309,109 @@
             background: rgba(0, 100, 220, 0.3);
         }
 
-        /* 移动端适配 */
         @media (max-width:768px) {
-            .contact-wrap { grid-template-columns: 1fr; }
-            .news-grid,.product-grid { grid-template-columns: 1fr; }
+            .campus-grid,.major-grid { grid-template-columns: 1fr; }
             .nav-menu { gap: 1.2rem; }
         }
     </style>
 </head>
 <body>
 
-<!-- 顶部全息科技导航 -->
 <header>
     <div class="container nav">
-        <a href="#" class="logo">FUTURE TECH</a>
+        <a href="#" class="logo">江西警察学院</a>
         <ul class="nav-menu">
             <li><a href="#home">首页</a></li>
-            <li><a href="#about">企业简介</a></li>
-            <li><a href="#news">新闻中心</a></li>
-            <li><a href="#product">产品展示</a></li>
-            <li><a href="#contact">联系我们</a></li>
+            <li><a href="#about">警校简介</a></li>
+            <li><a href="#campus">校园风光</a></li>
+            <li><a href="#major">专业介绍</a></li>
         </ul>
     </div>
 </header>
 
-<!-- 全屏炫酷轮播 -->
+<!-- 这里已经放好你上传的 JJ.png 校门照片 -->
 <section id="home" class="carousel">
-    <!-- 第1张：你的警校校门图（默认打开显示，保留active） -->
     <div class="carousel-item active" style="background-image:url('https://raw.githubusercontent.com/huweiqin747/company-website/main/JJ.png');"></div>
-    <!-- 第2、3张：你后续还能继续加别的图片，这里不加就留空备用，不要重复！ -->
-    <div class="carousel-item" style="background-image:url('https://picsum.photos/id/1035/1920/620');"></div>
-    <div class="carousel-item" style="background-image:url('https://picsum.photos/id/1040/1920/620');"></div>
+    <div class="carousel-item" style="background-image:url('https://picsum.photos/id/1035/1920/650');"></div>
+    <div class="carousel-item" style="background-image:url('https://picsum.photos/id/1040/1920/650');"></div>
 
     <button class="carousel-btn prev">❮</button>
     <button class="carousel-btn next">❯</button>
 </section>
 
-<!-- 企业简介 流光玻璃板块 -->
 <section id="about" class="section">
     <div class="container">
-        <h2 class="section-title">企业简介</h2>
+        <h2 class="section-title">警校简介</h2>
         <div class="about-box">
             <div class="about-text">
-                <p>本公司立足于前沿数字科技领域，专注于人工智能、大数据技术、数字化系统研发与整体解决方案服务，是集技术研发、方案设计、项目落地、后期运维于一体的现代化高新技术企业。</p>
+                <p>江西警察学院是经江西省人民政府批准建立的全日制普通本科高等院校，为江西省公安厅主管，是全省公安民警培养、培训的主要基地，肩负着为全省公安政法队伍输送高素质警务人才、开展公安科研与在职民警培训的核心使命。</p>
                 <br>
-                <p>公司汇聚行业内顶尖技术研发人才，拥有成熟完善的技术体系与项目服务经验，始终以创新驱动发展，以品质立足行业，深耕技术创新，赋能产业升级。</p>
+                <p>学院建校以来，始终坚持政治建校、从严治校的办学理念，秉承忠诚担当、勤学砺行的校训精神，秉承对党忠诚、服务人民、执法公正、纪律严明的总要求，深耕公安高等教育，构建完善的公安学科专业体系。</p>
                 <br>
-                <p>我们坚持高标准技术研发与精细化服务理念，依托硬核技术实力，为各行业客户提供稳定、安全、高效的数字化服务，持续探索未来科技边界，打造行业标杆品牌。</p>
+                <p>学院覆盖治安学、侦查学、网络安全与执法、刑事科学技术、经济犯罪侦查、禁毒学等全公安专业领域，形成了教学、科研、实战一体化的完整办学体系。学院拥有专业师资团队、全场景警务实战实训场地，紧贴新时代公安一线实战需求，全方位培养学员警务素养、实战能力、法治精神与忠诚品格。</p>
+                <br>
+                <p>建校至今，学院为江西省乃至全国公安政法系统输送了大批优秀警务人才，毕业生坚守公安一线岗位，守护地方社会安全稳定，是赣鄱大地公安铁军人才培养的核心摇篮。</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 新闻中心 悬浮科技卡片 -->
-<section id="news" class="section">
+<section id="campus" class="section">
     <div class="container">
-        <h2 class="section-title">新闻中心</h2>
-        <div class="news-grid">
-            <div class="news-card">
-                <img src="https://picsum.photos/id/1060/600/400" class="news-img">
-                <div class="news-content">
-                    <h3>企业战略全新升级</h3>
-                    <p>公司完成技术体系升级，拓展全新业务领域，布局未来数字化生态建设。</p>
+        <h2 class="section-title">校园风光</h2>
+        <div class="campus-grid">
+            <div class="campus-card">
+                <img src="https://raw.githubusercontent.com/huweiqin747/company-website/main/JJ.png" class="campus-img">
+                <div class="campus-content">
+                    <h3>校园正门</h3>
+                    <p>庄严肃穆校门，彰显警校严谨校风与使命担当</p>
                 </div>
             </div>
-            <div class="news-card">
-                <img src="https://picsum.photos/id/1049/600/400" class="news-img">
-                <div class="news-content">
-                    <h3>前沿技术发展动态</h3>
-                    <p>紧跟全球科技发展趋势，持续引入新型技术，优化产品核心性能。</p>
+            <div class="campus-card">
+                <img src="https://picsum.photos/id/1049/600/400" class="campus-img">
+                <div class="campus-content">
+                    <h3>实训场地</h3>
+                    <p>全场景警务实战基地，贴合一线公安实战教学</p>
                 </div>
             </div>
-            <div class="news-card">
-                <img src="https://picsum.photos/id/1039/600/400" class="news-img">
-                <div class="news-content">
-                    <h3>官方重大合作公告</h3>
-                    <p>达成多家优质企业战略合作，拓宽服务范围，提升综合服务能力。</p>
+            <div class="campus-card">
+                <img src="https://picsum.photos/id/1039/600/400" class="campus-img">
+                <div class="campus-content">
+                    <h3>校园环境</h3>
+                    <p>园林式校园，设施完善，学风浓厚，纪律严明</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 产品展示 -->
-<section id="product" class="section">
+<section id="major" class="section">
     <div class="container">
-        <h2 class="section-title">产品展示</h2>
-        <div class="product-grid">
-            <img src="https://picsum.photos/id/1025/500/400">
-            <img src="https://picsum.photos/id/1033/500/400">
-            <img src="https://picsum.photos/id/1044/500/400">
-            <img src="https://picsum.photos/id/1047/500/400">
-            <img src="https://picsum.photos/id/1058/500/400">
-            <img src="https://picsum.photos/id/1069/500/400">
-        </div>
-    </div>
-</section>
-
-<!-- 联系我们 -->
-<section id="contact" class="section">
-    <div class="container">
-        <h2 class="section-title">联系我们</h2>
-        <div class="contact-wrap">
-            <div class="contact-info">
-                <div class="contact-cell">
-                    <h4>联系电话</h4>
-                    <p>400-123-4567</p>
-                </div>
-                <div class="contact-cell">
-                    <h4>官方邮箱</h4>
-                    <p>service@futuretech.com</p>
-                </div>
-                <div class="contact-cell">
-                    <h4>公司地址</h4>
-                    <p>国家级数字科技产业园</p>
-                </div>
-                <div class="contact-cell">
-                    <h4>工作时间</h4>
-                    <p>周一至周五 09:00 - 18:00</p>
-                </div>
+        <h2 class="section-title">专业介绍</h2>
+        <div class="major-grid">
+            <div class="major-item">
+                <h3>网络安全与执法</h3>
+                <p>面向网络空间安全公安领域，培养网络攻防、电子数据取证、网络案件侦查、数据安全防护、网络警务执法专业人才，适配新时代公安网安工作全部需求。</p>
             </div>
-            <div class="contact-form">
-                <form id="form">
-                    <div class="form-item">
-                        <label>您的姓名</label>
-                        <input type="text" required>
-                    </div>
-                    <div class="form-item">
-                        <label>联系邮箱</label>
-                        <input type="email" required>
-                    </div>
-                    <div class="form-item">
-                        <label>留言内容</label>
-                        <textarea required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">提交留言</button>
-                </form>
+            <div class="major-item">
+                <h3>治安学</h3>
+                <p>公安基础核心专业，培养公共安全管理、社区警务、治安防控、基层综合警务执法人才。</p>
+            </div>
+            <div class="major-item">
+                <h3>刑事科学技术</h3>
+                <p>刑事现场勘查、物证痕迹检验、法医鉴定、案件技术侦查、刑事物证分析公安技术类专业。</p>
+            </div>
+            <div class="major-item">
+                <h3>侦查学</h3>
+                <p>刑事案件全流程侦查办案、犯罪分析研判、刑事侦查实战、刑事执法办案核心警务专业。</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 返回顶部 -->
 <div class="back-top">↑</div>
 
 <script>
-    // 轮播
     const items = document.querySelectorAll('.carousel-item');
     const prev = document.querySelector('.prev');
     const next = document.querySelector('.next');
@@ -561,21 +424,12 @@
     prev.onclick = ()=>{index--;if(index<0)index=items.length-1;show();}
     setInterval(()=>{index++;if(index>=items.length)index=0;show();},4200);
 
-    // 返回顶部
     const back = document.querySelector('.back-top');
     window.onscroll = ()=>{
         if(window.scrollY>300) back.classList.add('show');
         else back.classList.remove('show');
     }
     back.onclick = ()=>window.scrollTo({top:0,behavior:'smooth'});
-
-    // 表单提交
-    const form = document.getElementById('form');
-    form.onsubmit = e => {
-        e.preventDefault();
-        alert('留言提交成功！');
-        form.reset();
-    }
 </script>
 </body>
 </html>
